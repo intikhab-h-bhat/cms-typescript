@@ -8,6 +8,7 @@ import Staff from './components/Staff';
 import RegisterUser from './components/RegisterUser';
 import LoginUser from './components/LoginUser';
 import { BrowserRouter as Router, Route, Routes,Link } from 'react-router-dom';
+import DataDropdowns from './components/concurrent';
 
 function App() {
 
@@ -80,6 +81,9 @@ const handleLogout =async () => {
           <li className="nav-item">
             <Link className="nav-link" to="/login">Login</Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/dropdown">Dropdowns</Link>
+          </li>
           </>
         )}
         </ul>
@@ -92,7 +96,7 @@ const handleLogout =async () => {
         <Route path="/staff" element={<Staff />} />
         <Route path="/register" element={<RegisterUser/>} />
         <Route path="/login" element={<LoginUser onLogin={handleLogin} />} />
-        {/* <Route path="/logout" element={<LogOut/>} /> */}
+        <Route path="/dropdown" element={<DataDropdowns/>} />
     
       </Routes>
     </div>
